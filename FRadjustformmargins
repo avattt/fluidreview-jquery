@@ -1,4 +1,7 @@
 $(function(){
-//adjust margins to tighten form
+//adjust margins to tighten form. The first path finds an element. The find function searched for something that exists within that element (for instance, an input question within a gray box). 
+// finding an asterisk will select all elements contained within that element. the final piece edits the css of those elements
+
 $('#xDaQEDqVTdH.question.section-separator.questioneven').find('*').css('margin', '0');
+
 });

@@ -4,9 +4,11 @@ This project houses all of the javascript written on top of the General Operatin
 
 # How these files are organization
 
-jquery code is added to EACH page in the application. For instance, the GOS Pre-Application has multiple form tasks, and some form tasks have multiple pages. So, something like the adjust-margins blob (https://github.com/avattt/fluidreview-jquery/blob/master/s-adjust-formmargins) will need to be pasted into EACH page used. 
+jquery code is added to EACH page in the application. For instance, the GOS Pre-Application has multiple form tasks, and some form tasks have multiple pages. So, something like the adjust-margins blob (https://github.com/avattt/fluidreview-jquery/blob/master/S-adjust-formmargins) will need to be pasted into EACH page used. 
 
 So, this repository is organized as a library of jquery snippets. Each file that begins with S- (for snippet) has one example of one goal accomplished by one snippet of code, so it is easy to find specific code if it needs to be re-used in future customization of the application. 
+
+There is one exception: FR-preapp-990worksheet -- because the 990 Worksheet is complex, with multiple different types of functions and steps working together, that page is it's own example rather than being broken down into it's components. This might be a task for later. 
 
 The goal is to create a second category of files with a FR- prefix (for FluidReview) in order to have an actual copy of the javascript used on each page. 
 

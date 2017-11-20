@@ -4,7 +4,7 @@ This project houses all of the javascript written on top of the General Operatin
 
 # How these files are organization
 
-jquery code is added to EACH page in the application. For instance, the GOS Pre-Application has multiple form tasks, and some form tasks have multiple pages. So, something like the adjust-margins blob (https://github.com/avattt/fluidreview-jquery/blob/master/adjust-margins) will need to be pasted into EACH page used. 
+jquery code is added to EACH page in the application. For instance, the GOS Pre-Application has multiple form tasks, and some form tasks have multiple pages. So, something like the adjust-margins blob (https://github.com/avattt/fluidreview-jquery/blob/master/s-adjust-formmargins) will need to be pasted into EACH page used. 
 
 So, this repository is organized as a library of jquery snippets. Each file that begins with S- (for snippet) has one example of one goal accomplished by one snippet of code, so it is easy to find specific code if it needs to be re-used in future customization of the application. 
 

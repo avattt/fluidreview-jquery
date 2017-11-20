@@ -1,0 +1,4 @@
+$(function(){
+//adjust margins to tighten form
+$('#xDaQEDqVTdH.question.section-separator.questioneven').find('*').css('margin', '0');
+});

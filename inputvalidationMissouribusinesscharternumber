@@ -1,3 +1,12 @@
+// this validation will check to make sure that an accepted value is entered into a field.
+    // if the value is not accepted, a few things happen: 
+        // A red error message is displayed next to the field
+	// The normally green Next Page box at the bottom is disabled and turned gray, preventing the user from continuing (unless they manipulate the html source
+    // when they try to edit the erroneous answer, all error messages are removed
+    // if the value is accepted, animation and green color and prop("disabled",false) are attributed to the Next Page button (just in case it was previously disabled)
+
+// currently, the validation is not perfect. Ideally, the value would start with a specific character (n, b or e) and 8 digits. Right now it just must start with n, b or e and be 9 characters long. 
+
 $(function()  {
 
 

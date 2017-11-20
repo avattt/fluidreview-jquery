@@ -19,9 +19,11 @@ this is this user's first github repository. feedback and contributions are welc
 
 
 # follow up questions
-
-Switching Platforms
+ - Switching Platforms
 We may one day switch from FluidReview to SurveyMonkey Apply. I believe that this code would be easily transferrable to SurveyMonkey Apply (while needed to change out the variables), but I'm not sure yet. 
+
+# follow up tasks
+ - clarify what the elements selected (with $("#abcd1234") represent so that it is easier to substitute other elements
 
 
 # helpful links

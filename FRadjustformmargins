@@ -4,4 +4,12 @@ $(function(){
 
 $('#xDaQEDqVTdH.question.section-separator.questioneven').find('*').css('margin', '0');
 
+//ALTERNATIVE 1
+//children() only applies to sub-elements ONE level down. Useful when Yes/No questions appear on the page. Content() is similar. 
+$('#xxo7RAXFTdW.question.section-separator.questioneven').children().css('margin', 0);
+
+//ALTERNATIVE 2
+// this version [used in the GOS eligibility quiz] still uses Find(), but applies to more elements
+$('div.columns').find('*').css('margin', '0');
+
 });

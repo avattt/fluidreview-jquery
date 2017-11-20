@@ -2,7 +2,7 @@
 This project houses all of the javascript written on top of the General Operating Support application hosted by FluidReview. This author primarily used jquery rather than authoring plugins.  While FluidReview is a great drag-and-drop application builder, it lacks some out-of-the-box customization. The platform allows the builder to drop in a javascript box. The javascript box only applies to that application page (so, if a form has multiple pages, you'll need each page to have the javascript box dropped in). More about the javascript box here: https://fluidreview.zendesk.com/hc/en-us/articles/115002494634-JavaScript-Question
 
 
-# How these files are organization
+# How these files are organized
 
 jquery code is added to EACH page in the application. For instance, the GOS Pre-Application has multiple form tasks, and some form tasks have multiple pages. So, something like the adjust-margins blob (https://github.com/avattt/fluidreview-jquery/blob/master/S-adjust-formmargins) will need to be pasted into EACH page used. 
 

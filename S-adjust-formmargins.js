@@ -12,4 +12,9 @@ $('#xxo7RAXFTdW.question.section-separator.questioneven').children().css('margin
 // this version [used in the GOS eligibility quiz] still uses Find(), but applies to more elements
 $('div.columns').find('*').css('margin', '0');
 
+// ALT for multiple choice questions
+  // selects all "li" list items and adjust the margins in that group. use "px" with number to properly edit attribute. 
+  $('ul').children().css('margin', '3px');
+  
+  
 });

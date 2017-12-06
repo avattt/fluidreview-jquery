@@ -1,0 +1,16 @@
+// this snippet is intended to be added to the top of a 3D Matrix table. Since the input width within the FluidReivew 
+// 3D matrix table is fixed -- for instance, if the "columns" setting is set to 24, then then input cell
+// will be 240px -- then we should be able to add a floating header above the table that can provide additional 
+// information and won't shift around if the page is re-sized. 
+//
+// The purpose of this is becauses cells (including header cells) in the FluidReview form table cannot be 
+// merged or combined using colspan. And using jquery to edit the tables would not carry over to the FluidReview REVIEWER side. 
+// However, we can add this new table above the FluidReview 3D Matrix in the "extra description" section of 
+// the FluidReview question field properties, and hopefully that will do the trick. 
+
+
+<table style="width:100%"><tbody>
+	<tr><td>2017/18 Grant Cycle (Actual)</td></tr><tr><td>July 1, 2017 - June 30 - 2018</td></tr><tr><td>Cash</td></tr></tbody></table>
+<table style="width:100%"><tbody><tr><td>2017/18 Grant Cycle (Actual)</td></tr><tr><td>July 1, 2017 - June 30 - 2018</td></tr><tr><td>In-kind</td></tr></tbody></table>
+<table style="width:100%"><tbody><tr><td>2018/19 Grant Cycle (Actual)</td></tr><tr><td>July 1, 2018 - June 30 - 2019</td></tr><tr><td>Cash</td></tr></tbody></table>
+<table style="width:100%"><tbody><tr><td>2018/19 Grant Cycle (Actual)</td></tr><tr><td>July 1, 2018 - June 30 - 2019</td></tr><tr><td>In-kind</td></tr></tbody></table>

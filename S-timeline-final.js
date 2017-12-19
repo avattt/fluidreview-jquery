@@ -118,50 +118,45 @@ $("tr td:nth-of-type(3) input").focus(function() {
 
 
 $("tr td:nth-of-type(3) input").blur(function() {
+	if (($(this).closest('td').index()) == 3) {
+$("#id_TeJc3wCMTW").val(0)
 	$("tr td:nth-of-type(3) input").each( function() {		
-//			if ($(this).val().length > 0) {
-        var enddate = $(this).val();
-		var startdate = $(this).closest('tr').find('td').first().next().find('input').first().val();
-        var parseStartdate = Date.parse(startdate);
-        var parseEnddate = Date.parse(enddate);
-        var parseJune = Date.parse("05/15/2018");
-        var parseNov = Date.parse('11/30/2019');
-        var dateLength = ((enddate.length)+(startdate.length));
-        $(this).closest('tr').find('td').first().next().next().next().next().find('input').first().val(dateLength);
-  		if (((startdate > parseJune) && (startdate < parseNov) && (enddate > parseJune) && (enddate < parseNov)) && (startdate < enddate) && (datelength == 0)) {              
-// $(this).closest('tr').find('td').first().next().next().next().find('input').first().val(s1.length);
-// $(this).closest('tr').find('td').first().next().next().next().next().find('input').first().val(s2.length);
-//	if (($(this).val().length > 0) && ((Date.parse(s1)) > (Date.parse("05/15/2018"))) && ((Date.parse(s1)) < (Date.parse(s2))) && ((Date.parse(s2)) > (Date.parse("05/15/2018"))) && ((Date.parse(s1)) < (Date.parse("11/30/2019"))) && ((Date.parse(s2)) < (Date.parse("11/30/2019")))) {
-			//if (((Date.parse(s1)) > (Date.parse("05/15/2018"))) && ((Date.parse(s1)) < (Date.parse(s2))) && ((Date.parse(s2)) > (Date.parse("05/15/2018"))) && ((Date.parse(s1)) < (Date.parse("11/30/2019"))) && ((Date.parse(s2)) < (Date.parse("11/30/2019")))) {
-	   			// $("font#errorsd1").remove(); 
+        var ed = $(this).val();
+		var sd = $(this).closest('tr').find('td').first().next().find('input').first().val();
+        var psd = Date.parse(sd);
+        var ped = Date.parse(ed);
+        var pj = Date.parse("05/15/2018");
+        var pn = Date.parse('11/30/2019');
+        var dl = ((ed.length)+(sd.length));
+//       $(this).closest('tr').find('td').first().next().next().next().next().find('input').first().val(dl);
+  		if ((dl == 0) || (((sd > pj) && (sd < pn) && (ed > pj) && (ed < pn)) && (psd < ped))) {              
                 $(this).closest('td').find('font#errorsd1').first().remove();
                 $("font#errored2").remove();  $("font#errorsded3").remove();  $("font#error2").remove();  $("font#error3").remove();
-   	   			$("input#next-submit-button").prop("disabled",false).css({"background-color": "#2cb866", "transition": "all .2s ease-in-out", "border": "0", "color": "#fff", "font-weight": "500"}).addClass("button.button-highlight");
+   	   		}
+   			else 
+   			{
+       			
+       			$("font#error2").remove();
+	   			$(this).after("<font size = 2 color = red id=errorsd1>Invalid entry.<strong>*</strong></font>");
+  				var incrinvalidresponses = Number($("#id_TeJc3wCMTW").val());
+                $("#id_TeJc3wCMTW").val((incrinvalidresponses+1))
+  			}
+            if ($("#id_TeJc3wCMTW").val() == 0) {
+            $("input#next-submit-button").prop("disabled",false).css({"background-color": "#2cb866", "transition": "all .2s ease-in-out", "border": "0", "color": "#fff", "font-weight": "500"}).addClass("button.button-highlight");
     			$("input#next-submit-button").hover(function() {
     				$("input#next-submit-button").animate({backgroundColor: '#24A25C'}, 40);
    					}, function () {
    					$("input#next-submit-button").animate({backgroundColor: '#2cb866'}, 40);
    				});
-   			}
-   			else 
-   			{
-       			$("font#error3").remove();
-       			$("font#error2").remove();
-	   			$(this).after("<font size = 2 color = red id=errorsd1>Invalid entry.<strong>*</strong></font>");
-  				$("input#next-submit-button").prop("disabled",true).css({'background-color' : 'lightgray'}).after("<font color = red id=error2> Please resolve any errors above before continuing.</font>");
-  				$(this).parents("table:first").prop("disabled",true).css({'background-color' : 'lightgray'}).after("<font color = red id=error3><strong>*</strong> Please check that your start and end dates are between June 15, 2018 and November 30, 2019. The Start Date may not be greater than the End Date.</font>");
-  			}
-            if (((s1.length == 0) && (s2.length == 0))) {
-               	$(this).closest('td').find('font#errorsd1').first().remove();
-               	// $("font#errorsd1").remove();
-  			}
-// 		}   
-             
+            
+            }
+            else {
+            $("input#next-submit-button").prop("disabled",true).css({'background-color' : 'lightgray'}).after("<font color = red id=error2> <br>Please resolve any errors above before continuing. <br><strong>*</strong> Check that your start and end dates are between June 15, 2018 and November 30, 2019. The Start Date may not be greater than the End Date.</font>");
+            $(this).parents("table:first").prop("disabled",true).css({'background-color' : 'lightgray'}).after("<font color = red id=error3><strong>*</strong> Please check that your start and end dates are between June 15, 2018 and November 30, 2019. The Start Date may not be greater than the End Date.</font>");
+            }
    	});
+    }
 });
-
-//$("#id_4pmtbfibRC_16").val(108700);
-
 
 
 // use errorsd1 for Start Date not in range error
